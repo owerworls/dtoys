@@ -1,0 +1,152 @@
+{{ header }} {{ column_left }} 
+<div id="content">
+	<div class="page-header">
+		<div class="container-fluid">
+			<div class="pull-right"><a href="{{ add }}" data-toggle="tooltip" title="{{ button_add }}" class="btn btn-primary"><i class="fa fa-plus"></i></a>
+				<button onclick="$('#form').attr('action', '{{ delete }}');
+						$('#form').attr('target', '_self');
+						$('#form').submit();" type="button" data-toggle="tooltip" title="{{ button_delete }}" class="btn btn-danger" onclick="confirm('{{ text_confirm }}') ? $('#form-manufacturer').submit() : false;"><i class="fa fa-trash-o"></i></button>
+			</div>
+			<h1>{{ heading_title }}</h1>
+			<ul class="breadcrumb">
+				<?php foreach ($breadcrumbs as $breadcrumb) { ?>
+				<li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+				<?php } ?>
+			</ul>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<?php if ($module_install) { ?>
+			<?php if ($error_warning) { ?>
+			<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+			</div>
+			<?php } ?>
+			<?php if ($success) { ?>
+			<div class="alert alert-success"><i class="fa fa-check-circle"></i> {{ success }}
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+			</div>
+			<?php } ?>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title"><i class="fa fa-list"></i> {{ text_list }}</h3>
+				</div>
+				<div class="panel-body">
+					<form action="" method="post" enctype="multipart/form-data" id="form">
+						<div class="table-responsive">
+							<table class="table table-bordered table-hover">
+							<thead>
+							<tr>
+								<td class="right">№ заказа</td>
+								<td class="right">Телефон</td>
+								<td class="right">Товар</td>
+								<td class="right">Итого</td>
+								<td class="left">Дата добавления</td>
+								<td class="right">Действие</td>
+							</tr>
+							</thead>
+							<tbody>
+							{% for order in orders %}
+							<tr>
+
+								<td class="right">{{ order.order_id }}</td>
+								<td class="right">{{ order.contact }}</td>
+								<td class="right"><a href="{{ order.product_href }}">{{ order.product_name }}</a></td>
+								<td class="right">{{ order.total }}</td>
+								<td class="left">{{ order.date_added }}</td>
+								<td class="right">{% for action in order.action %}
+									[ <a href="{{ action.href }}">{{ action.text }}</a> ]
+                                    {% endfor %}</td>
+							</tr>
+                            {% endfor %}
+
+							</tbody>
+						</table>
+						</div>
+					</form>
+					<div class="pagination">{{ pagination }}</div>
+				</div>
+			</div>
+		<?php } else { ?>
+			<div class="warning">{{ text_module_not_exists }}</div>
+		<?php } ?>
+	</div>
+</div>
+
+<script type="text/javascript"><!--
+	function filter() {
+		url = 'index.php?route=catalog/catapulta&token={{ token }}';
+
+		var filter_order_id = $('input[name=\'filter_order_id\').attr('value');
+
+		if (filter_order_id) {
+			url += '&filter_order_id='+encodeURIComponent(filter_order_id);
+		}
+
+		var filter_contact = $('input[name=\'filter_contact\').attr('value');
+
+		if (filter_contact) {
+			url += '&filter_contact='+encodeURIComponent(filter_contact);
+		}
+
+		var filter_product_name = $('input[name=\'filter_product_name\').attr('value');
+
+		if (filter_product_name) {
+			url += '&filter_product_name='+encodeURIComponent(filter_product_name);
+		}
+
+		var filter_total = $('input[name=\'filter_total\').attr('value');
+
+		if (filter_total) {
+			url += '&filter_total='+encodeURIComponent(filter_total);
+		}
+
+		var filter_date_added = $('input[name=\'filter_date_added\').attr('value');
+
+		if (filter_date_added) {
+			url += '&filter_date_added='+encodeURIComponent(filter_date_added);
+		}
+
+		location = url;
+	}
+	//--></script>
+<script type="text/javascript"><!--
+	$(document).ready(function () {
+		$('.date').datepicker({dateFormat: 'yy-mm-dd'});
+	});
+	//--></script>
+<script type="text/javascript"><!--
+	$('#form input').keydown(function (e) {
+		if (e.keyCode==13) {
+			filter();
+		}
+	});
+	//--></script>
+<script type="text/javascript"><!--
+	$('input[name=\'filter_product_name\').autocomplete({
+		delay: 500,
+		source: function(request, response) {
+			$.ajax({
+				url: 'index.php?route=catalog/catapulta/autocomplete&token={{ token }}&filter_product_name=' +  encodeURIComponent(request.term),
+				dataType: 'json',
+				success: function(json) {
+					response($.map(json, function(item) {
+						return {
+							label: item.name,
+							value: item.product_id
+						}
+					}));
+				}
+			});
+		},
+		select: function(event, ui) {
+			$('input[name=\'filter_product_name\').val(ui.item.label);
+
+			return false;
+		},
+		focus: function(event, ui) {
+			return false;
+		}
+	});
+	//--></script>
+{{ footer }}

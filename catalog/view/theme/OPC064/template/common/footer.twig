@@ -1,0 +1,105 @@
+<footer>
+    {% if footer_top %}
+        <div class="footer-top-cms col-sm-12">
+            {{ footer_top }}
+        </div>
+    {% endif %}
+
+    <div class="container">
+        <div class="row">
+            <!--{% if footer_left %}
+	<div class="footer-column footer-left-cms col-sm-3">
+	{{ footer_left }}
+	</div>
+	{% endif %}-->
+
+            {#<div class="col-sm-3 footer-column {{ 'footer-' ~ text_extra|replace({' ': '-'})|lower }}">
+                <h5>{{ text_extra }}</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+                    <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+                    #}{#<li><a href="{{ voucher }}">{{ text_voucher }}</a></li>#}{#
+                    #}{#<li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>#}{#
+                    #}{#<li><a href="{{ special }}">{{ text_special }}</a></li>#}{#
+                    <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+                </ul>
+            </div>#}
+            {% if informations %}
+                <div class="col-sm-4 footer-column {{ 'footer-' ~ text_information|replace({' ': '-'})|lower }}">
+                    <h5>{{ text_information }}</h5>
+                    <ul class="list-unstyled">
+                        {% for information in informations %}
+                            <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+                        {% endfor %}
+                        <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+                        <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+                        {#<li><a href="{{ voucher }}">{{ text_voucher }}</a></li>#}
+                        {#<li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>#}
+                        {#<li><a href="{{ special }}">{{ text_special }}</a></li>#}
+                        <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+                    </ul>
+                </div>
+            {% endif %}
+            {#<div class="col-sm-4 footer-column {{ 'footer-' ~ text_service|replace({' ': '-'})|lower }}">
+              <h5>{{ text_service }}</h5>
+              <ul class="list-unstyled">
+                <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+                <li><a href="{{ return }}">{{ text_return }}</a></li>
+                <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+              </ul>
+            </div>#}
+
+            {#<div class="col-sm-3 footer-column {{ 'footer-' ~ text_account|replace({' ': '-'})|lower }}">#}
+                {#<h5>{{ text_account }}</h5>#}
+                {#<ul class="list-unstyled">#}
+                    {#<li><a href="{{ account }}">{{ text_account }}</a></li>#}
+                    {#<li><a href="{{ order }}">{{ text_order }}</a></li>#}
+                    {#<li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>#}
+                    {#<li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>#}
+                {#</ul>#}
+            {#</div>#}
+
+            <div class="col-sm-4 footer-column hidden">
+                <h5>ИП Коляда Павел Евстафьевич</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">УНП ‎190026405,<br>
+                        Свидетельство о гос.регистрации<br>
+                        Минский горисполком от 16.02.2010</a></li>
+                    <li><a href="#">г.Минск, ул. К.Либкнехта, 84/1 кв 41 (только для почтовой корреспонденции)</a></li>
+                </ul>
+            </div>
+            {% if footer_right %}
+                <div class="footer-column footer-right-cms col-sm-4">
+                    {{ footer_right }}  </div>
+            {% endif %}
+
+            <div class="col-sm-4 footer-column">
+                <h5>Время работы</h5>
+                <ul class="list-unstyled">
+                <li><a href="#">Пн-Пт с 10.00 до 18.00. Сб-Вс - выходной.</a></li>
+                <li><a href="#">Заказы через корзину принимаются круглосуточно и без выходных.</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        {% if footer_bottom %}
+            <div class="footer-bottom-cms col-sm-12">
+                {{ footer_bottom }}
+            </div>
+        {% endif %}
+        <p>{{ powered }}</p>
+    </div>
+
+</footer>
+</div>
+
+{% for script in scripts %}
+    <script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+</body></html>

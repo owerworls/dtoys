@@ -1,0 +1,320 @@
+[12-Jun-2018 12:11:27 UTC] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "catalog/pricing.twig" (looked into: /home/chugu181/dtoys.opencart-solution.co.ua/admin/view/template). in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/template/Twig/Loader/Filesystem.php:215
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/template/Twig/Loader/Filesystem.php(139): Twig_Loader_Filesystem->findTemplate('catalog/pricing...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/template/Twig/Environment.php(312): Twig_Loader_Filesystem->getCacheKey('catalog/pricing...')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/template/Twig/Environment.php(378): Twig_Environment->getTemplateClass('catalog/pricing...', NULL)
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/template/twig.php(33): Twig_Environment->loadTemplate('catalog/pricing...')
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/template.php(51): Template\Twig->render('catalog/pricing', '0')
+#5  in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/template/Twig/Loader/Filesystem.php on line 215
+[12-Jun-2018 15:54:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Request::get() in /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/pricing.php:97
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/action.php(79): ControllerCatalogPricing->edit()
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/action.php(79): ControllerStartupRouter->index()
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/router.php(67): Action->execute(Object(Registry))
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/router.php(56): Router->execute(Object(Action))
+#5 /home/chugu181/dtoys.opencart-solution.co.ua/system/framework.php(168): Router->dispatch(Object(Action), Object(Action))
+#6 /home/chugu181/dtoys.opencart-solution.co.ua/system/startup.php(104): require_once('/home/chugu181/...')
+#7 /home/chugu181/dtoys.opencart-solution.co.ua/admin/index.p in /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/pricing.php on line 97
+[12-Jun-2018 15:56:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Request::get() in /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/pricing.php:97
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/action.php(79): ControllerCatalogPricing->edit()
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/action.php(79): ControllerStartupRouter->index()
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/router.php(67): Action->execute(Object(Registry))
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/router.php(56): Router->execute(Object(Action))
+#5 /home/chugu181/dtoys.opencart-solution.co.ua/system/framework.php(168): Router->dispatch(Object(Action), Object(Action))
+#6 /home/chugu181/dtoys.opencart-solution.co.ua/system/startup.php(104): require_once('/home/chugu181/...')
+#7 /home/chugu181/dtoys.opencart-solution.co.ua/admin/index.p in /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/pricing.php on line 97
+[12-Jun-2018 15:58:26 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/pricing.php:99
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/action.php(79): ControllerCatalogPricing->edit()
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/action.php(79): ControllerStartupRouter->index()
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/router.php(67): Action->execute(Object(Registry))
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/router.php(56): Router->execute(Object(Action))
+#5 /home/chugu181/dtoys.opencart-solution.co.ua/system/framework.php(168): Router->dispatch(Object(Action), Object(Action))
+#6 /home/chugu181/dtoys.opencart-solution.co.ua/system/startup.php(104): require_once('/home/chugu181/...')
+#7 /home/chugu181/dtoys.opencart-solution.co.ua/admin/ind in /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/pricing.php on line 99
+[12-Jun-2018 15:58:49 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/pricing.php:99
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/action.php(79): ControllerCatalogPricing->edit()
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/action.php(79): ControllerStartupRouter->index()
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/router.php(67): Action->execute(Object(Registry))
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/router.php(56): Router->execute(Object(Action))
+#5 /home/chugu181/dtoys.opencart-solution.co.ua/system/framework.php(168): Router->dispatch(Object(Action), Object(Action))
+#6 /home/chugu181/dtoys.opencart-solution.co.ua/system/startup.php(104): require_once('/home/chugu181/...')
+#7 /home/chugu181/dtoys.opencart-solution.co.ua/admin/ind in /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/pricing.php on line 99
+[12-Jun-2018 18:40:40 UTC] PHP Fatal error:  Uncaught Exception: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC' at line 1<br />Error No: 1064<br />SELECT vendor_id, product_id FROM oc_product WHERE vendor='1' ASC in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('SELECT vendor_i...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(505): DB->query('SELECT vendor_i...')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/loader.php(248): ModelCatalogProduct->getProductsColumn(Array)
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/import.php(46): Proxy->__call('getProductsColu...', Array)
+#5 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/ in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 40
+[12-Jun-2018 18:41:34 UTC] PHP Fatal error:  Uncaught Exception: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC' at line 1<br />Error No: 1064<br />SELECT vendor_id, product_id FROM oc_product WHERE vendor='1' ASC in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('SELECT vendor_i...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(505): DB->query('SELECT vendor_i...')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/loader.php(248): ModelCatalogProduct->getProductsColumn(Array)
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/import.php(46): Proxy->__call('getProductsColu...', Array)
+#5 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/ in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 40
+[12-Jun-2018 18:42:04 UTC] PHP Fatal error:  Uncaught Exception: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ASC' at line 1<br />Error No: 1064<br />SELECT vendor_id, product_id FROM oc_product WHERE vendor='1' ASC in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('SELECT vendor_i...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(505): DB->query('SELECT vendor_i...')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/loader.php(248): ModelCatalogProduct->getProductsColumn(Array)
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/import.php(46): Proxy->__call('getProductsColu...', Array)
+#5 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/ in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 40
+[12-Jun-2018 18:47:18 UTC] PHP Fatal error:  Uncaught Exception: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'date_modified = NOW() WHERE product_id = '1'' at line 1<br />Error No: 1064<br />UPDATE oc_product SET price = '0' date_modified = NOW() WHERE product_id = '1' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('UPDATE oc_produ...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(150): DB->query('UPDATE oc_produ...')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/loader.php(248): ModelCatalogProduct->updateProductPrice(Object(SimpleXMLElement), 0)
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/import.php(144): Proxy->__call('updateProductPr in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 40
+[12-Jun-2018 18:55:17 UTC] PHP Fatal error:  Uncaught Exception: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'date_modified = NOW() WHERE product_id = '1'' at line 1<br />Error No: 1064<br />UPDATE oc_product SET price = '0' date_modified = NOW() WHERE product_id = '1' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('UPDATE oc_produ...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(150): DB->query('UPDATE oc_produ...')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/loader.php(248): ModelCatalogProduct->updateProductPrice(Object(SimpleXMLElement), 0)
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/import.php(144): Proxy->__call('updateProductPr in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 40
+[12-Jun-2018 18:55:42 UTC] PHP Fatal error:  Uncaught Exception: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'date_modified = NOW() WHERE product_id = '1'' at line 1<br />Error No: 1064<br />UPDATE oc_product SET price = '5' date_modified = NOW() WHERE product_id = '1' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('UPDATE oc_produ...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(150): DB->query('UPDATE oc_produ...')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/loader.php(248): ModelCatalogProduct->updateProductPrice(Object(SimpleXMLElement), 5)
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/import.php(144): Proxy->__call('updateProductPr in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 40
+[12-Jun-2018 18:56:06 UTC] PHP Fatal error:  Uncaught Exception: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'date_modified = NOW() WHERE product_id = '1'' at line 1<br />Error No: 1064<br />UPDATE oc_product SET price = '5' date_modified = NOW() WHERE product_id = '1' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('UPDATE oc_produ...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(150): DB->query('UPDATE oc_produ...')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/loader.php(248): ModelCatalogProduct->updateProductPrice(Object(SimpleXMLElement), 5)
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/import.php(144): Proxy->__call('updateProductPr in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 40
+[14-Jun-2018 07:33:08 UTC] PHP Fatal error:  Uncaught Exception: Error: Lost connection to MySQL server during query<br />Error No: 2013<br />REPLACE INTO `oc_session` SET session_id = '26cd4c1a83f645aabdddd4e5ae', `data` = '{\"language\":\"ru-ru\",\"currency\":\"UAH\",\"user_id\":\"1\",\"user_token\":\"jt5rBXUjoutgpYxAtGzSiv5fJDJLpiyF\"}', expire = '2018-06-14 07:57:08' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('REPLACE INTO `o...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/session/db.php(32): DB->query('REPLACE INTO `o...')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/session.php(81): Session\DB->write('26cd4c1a83f645a...', Array)
+#3 [internal function]: Session->close()
+#4 {main}
+  thrown in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 40
+[23-Jun-2018 19:01:16 UTC] PHP Fatal error:  Uncaught Exception: Error: Table 'chugu181_dtoys_new.oc_product' doesn't exist<br />Error No: 1146<br />INSERT INTO oc_product SET model = '545', sku = '', upc = '', ean = '', jan = '', isbn = '', mpn = '', location = '', quantity = '100', minimum = '1', subtract = '0', stock_status_id = '9', date_available = '2018-06-23', manufacturer_id = '0', shipping = '1', price = '37', points = '0', weight = '0', weight_class_id = '7', length = '0', width = '0', height = '0', length_class_id = '4', status = '1', vendor = '2', vendor_id = '545', tax_class_id = '0', sort_order = '1000', date_added = NOW(), date_modified = NOW() in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(9): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/loader.php(248): in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 40
+[23-Jun-2018 19:48:36 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/import.php on line 105
+[23-Jun-2018 19:48:40 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/import.php on line 105
+[23-Jun-2018 19:48:43 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/import.php on line 105
+[23-Jun-2018 19:48:54 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/import.php on line 105
+[23-Jun-2018 19:57:06 UTC] PHP Fatal error:  Uncaught Exception: Error: Table 'chugu181_dtoys_new.oc_session' doesn't exist<br />Error No: 1146<br />SELECT `data` FROM `oc_session` WHERE session_id = '7236416e55ae8f5ed0f851196d' AND expire > 1529783826 in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('SELECT `data` F...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/session/db.php(21): DB->query('SELECT `data` F...')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/session.php(72): Session\DB->read('7236416e55ae8f5...')
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/framework.php(106): Session->start('7236416e55ae8f5...')
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/system/startup.php(104): require_once('/home/chugu181/...')
+#5 /home/chugu181/dtoys.opencart-solution.co.ua/admin/index.php(19): start('admin')
+#6 {main}
+  thrown in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 40
+[06-Jul-2018 15:17:39 UTC] PHP Fatal error:  Uncaught Exception: Error: Could not load model catalog/image! in /home/chugu181/storage/modification/system/engine/loader.php:89
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/product.php(338): Loader->model('catalog/image')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/product.php(12): ControllerCatalogProduct->getList()
+#2 /home/chugu181/storage/modification/system/engine/action.php(79): ControllerCatalogProduct->index()
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#4 /home/chugu181/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#5 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/router.php(67): Action->execute(Object(Registry))
+#6 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/router.php(56): Router->execute(Object(Action))
+#7 /home/chugu181/dtoys.opencart-solution.co.ua/system/framework.php(168): R in /home/chugu181/storage/modification/system/engine/loader.php on line 89
+[06-Jul-2018 17:21:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function DB\mysql_connect() in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysql.php:7
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(31): DB\MySQL->__construct('localhost', 'root', '', 'dtoys_new', '3306')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/system/framework.php(80): DB->__construct('mysql', 'localhost', 'root', '', 'dtoys_new', '3306')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/startup.php(104): require_once('/home/chugu181/...')
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/admin/index.php(19): start('admin')
+#4 {main}
+  thrown in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysql.php on line 7
+[06-Jul-2018 17:21:49 UTC] PHP Fatal error:  Uncaught Exception: Error: <br />Error  No:  in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:10
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(31): DB\MySQLi->__construct('localhost', 'root', '', 'dtoys_new', '3306')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/system/framework.php(80): DB->__construct('mysqli', 'localhost', 'root', '', 'dtoys_new', '3306')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/startup.php(104): require_once('/home/chugu181/...')
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/admin/index.php(19): start('admin')
+#4 {main}
+  thrown in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 10
+[06-Jul-2018 17:22:03 UTC] PHP Fatal error:  Uncaught Exception: Error: <br />Error  No:  in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:10
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(31): DB\MySQLi->__construct('localhost', 'root', '', 'dtoys_new', '3306')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/system/framework.php(80): DB->__construct('mysqli', 'localhost', 'root', '', 'dtoys_new', '3306')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/startup.php(104): require_once('/home/chugu181/...')
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/admin/index.php(19): start('admin')
+#4 {main}
+  thrown in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 10
+[06-Jul-2018 18:10:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function DB\mysql_connect() in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysql.php:7
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(31): DB\MySQL->__construct('localhost', 'chugu181_dtoys', '07+9sp0Jc)mb', 'chugu181_dtoys_...', '3306')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/system/framework.php(80): DB->__construct('mysql', 'localhost', 'chugu181_dtoys', '07+9sp0Jc)mb', 'chugu181_dtoys_...', '3306')
+#2 /home/chugu181/dtoys.opencart-solution.co.ua/system/startup.php(104): require_once('/home/chugu181/...')
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/admin/index.php(19): start('admin')
+#4 {main}
+  thrown in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysql.php on line 7
+[11-Jul-2018 10:09:55 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '3195-2' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_description SET product_id = '3195', language_id = '2', name = 'Книга &quot;Загадки. 65 загадок про все на свiтi&quot;', description = '&lt;p&gt;&quot;Загадки. 65 загадок про все на свiтi&quot;,&lt;/p&gt;&lt;p&gt;размер книги 22*17см,&lt;/p&gt;&lt;p&gt; ТМ Пегас, Україна&lt;/p&gt;&lt;p&gt;язык украинский&lt;/p&gt;', tag = '', meta_title = '&quot;Загадки. 65 загадок про все на свiтi&quot;, 22*17см, ТМ Пегас, Україна', meta_description = '', meta_keyword = '' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(160): DB->query('INS in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[11-Jul-2018 11:00:58 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '1930-0' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_store SET product_id = '1930', store_id = '0' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(167): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->editProduct('1930', Array)
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/product.php(80): Proxy->__call('editProduct', Array)
+#5 /home/chugu181/storage/modification/system/engine/action.php(79): ControllerCatalogProduct->edit()
+#6 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/startup/rout in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[11-Jul-2018 13:33:51 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '1909-2' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_description SET product_id = '1909', language_id = '2', name = 'Книга &quot;В гостях у сказки&quot; (рус)', description = '&lt;p&gt;&quot;В гостях у сказки&quot;&lt;/p&gt;&lt;p&gt;язык русский&lt;/p&gt;&lt;p&gt;формат А4 &lt;/p&gt;&lt;p&gt;ТМ Пегас, Украина&lt;/p&gt;', tag = '', meta_title = '&quot;В гостях у сказки&quot; (рус), А4 26*20см, ТМ Пегас, Украина', meta_description = '', meta_keyword = '' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(160): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): Model in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[16-Jul-2018 09:40:06 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '21031-120' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '21031', category_id = '120' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(251): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->editProduct('21031', Array)
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/product.php(80): Proxy->__call('editProduct', Array)
+#5 /home/chugu181/storage/modification/system/engine/action.php(79): ControllerCatalogProduct->edit()
+#6 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[18-Jul-2018 08:10:22 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '8191-2' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_description SET product_id = '8191', language_id = '2', name = 'Грамота &quot;Рамка&quot;  А4 РМ-054, 30*20см, цена за 1шт', description = 'Грамота &quot;Рамка&quot;  А4 РМ-054, 30*20см, цена за 1шт', tag = '', meta_title = 'Грамота &quot;Рамка&quot;  А4 РМ-054, 30*20см, цена за 1шт', meta_description = '', meta_keyword = '' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(160): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->editProduct('8191', Array)
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[18-Jul-2018 12:34:40 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '423-2' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_description SET product_id = '423', language_id = '2', name = 'Диплом Выпускник дет. сада, 21*15см.,  (двойной) (Союзмультфильм)', description = 'Диплом Выпускник дет. сада, 21*15см.,  (двойной) (Союзмультфильм)', tag = '', meta_title = 'Диплом Выпускник дет. сада, 21*15см.,  (двойной) (Союзмультфильм)', meta_description = '', meta_keyword = '' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(160): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->editProdu in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[18-Jul-2018 15:02:59 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '9390-2' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_description SET product_id = '9390', language_id = '2', name = 'Карнавальний костюм &quot;София&quot;, размер &quot;М&quot;(120шт)', description = 'Карнавальний костюм &quot;София&quot;, размер &quot;М&quot;(120шт)', tag = '', meta_title = 'Карнавальний костюм &quot;София&quot;, размер &quot;М&quot;(120шт)', meta_description = '', meta_keyword = '' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(160): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->editProduct('9390', Array)
+#3 /home/chugu18 in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[20-Jul-2018 07:40:20 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '2803-2' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_description SET product_id = '2803', language_id = '2', name = 'Машина- джип инерц., в блистере 34*21*18см (24шт)', description = 'Машина- джип инерц., в блистере 34*21*18см (24шт)', tag = '', meta_title = 'Машина- джип инерц., в блистере 34*21*18см (24шт)', meta_description = '', meta_keyword = '' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(160): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->editProduct('2803', Array)
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Lo in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[20-Jul-2018 07:42:13 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '2812-2' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_description SET product_id = '2812', language_id = '2', name = 'Машина- спортивная инерц., в блистере 50*22*15см (16шт)', description = 'Машина- спортивная инерц., в блистере 50*22*15см (16шт)', tag = '', meta_title = 'Машина- спортивная инерц., в блистере 50*22*15см (16шт)', meta_description = '', meta_keyword = '' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(160): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->editProduct('2812', Array)
+#3 /home/chugu181/dtoys.opencart-solution.c in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[20-Jul-2018 08:29:26 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '23391-2' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_description SET product_id = '23391', language_id = '2', name = 'Модна валізка: Стилі одягу (у)карт.обкладинка,трафарет,наліпки 96с., 13*29 см,  ТМ Ранок, Украина', description = 'Модна валізка: Стилі одягу (у)карт.обкладинка,трафарет,наліпки 96с., 13*29 см,  ТМ Ранок, Украина', tag = '', meta_title = 'Модна валізка: Стилі одягу (у)карт.обкладинка,трафарет,наліпки 96с., 13*29 см,  ТМ Ранок, Украина', meta_description = '', meta_keyword = '' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.u in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[20-Jul-2018 12:38:49 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '21324-2' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_description SET product_id = '21324', language_id = '2', name = 'Набор для торта керам (блюдо+6тарелок) 27см 7пр/наб N00976 (10шт)', description = 'Набор для торта керам (блюдо+6тарелок) 27см 7пр/наб N00976 (10шт)', tag = '', meta_title = 'Набор для торта керам (блюдо+6тарелок) 27см 7пр/наб N00976 (10шт)', meta_description = '', meta_keyword = '' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(160): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->editProduct('21324', Ar in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[22-Jul-2018 15:10:35 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '78-121' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '78', category_id = '121' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(153): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->addProductCategory(Array, '121')
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/product.php(1403): Proxy->__call('addProductCateg...', Array)
+#5 /home/chugu181/storage/modification/system/engine/action.php(79): ControllerCatalogProduct->addProductCategory()
+#6 /home/chugu181/dtoys.opencart-solution. in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[22-Jul-2018 15:10:51 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '78-121' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '78', category_id = '121' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(153): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->addProductCategory(Array, '121')
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/product.php(1403): Proxy->__call('addProductCateg...', Array)
+#5 /home/chugu181/storage/modification/system/engine/action.php(79): ControllerCatalogProduct->addProductCategory()
+#6 /home/chugu181/dtoys.opencart-solution. in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[22-Jul-2018 15:11:51 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '78-121' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '78', category_id = '121' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(153): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->addProductCategory(Array, '121')
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/product.php(1403): Proxy->__call('addProductCateg...', Array)
+#5 /home/chugu181/storage/modification/system/engine/action.php(79): ControllerCatalogProduct->addProductCategory()
+#6 /home/chugu181/dtoys.opencart-solution. in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[22-Jul-2018 15:15:39 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '78-121' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '78', category_id = '121' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(153): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->addProductCategory(Array, '121')
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/product.php(1403): Proxy->__call('addProductCateg...', Array)
+#5 /home/chugu181/storage/modification/system/engine/action.php(79): ControllerCatalogProduct->addProductCategory()
+#6 /home/chugu181/dtoys.opencart-solution. in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[22-Jul-2018 15:18:15 UTC] PHP Fatal error:  Uncaught Exception: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO oc_product_to_category SET product_id = '78', category_id = '121'' at line 1<br />Error No: 1064<br />DELETE FROM oc_product_to_category WHERE  product_id = '78'  AND category_id = '121'; INSERT INTO oc_product_to_category SET product_id = '78', category_id = '121' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('DELETE FROM oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(153): DB->query('DELETE FROM oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->addProductCategory(Array, '121')
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.op in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[22-Jul-2018 15:46:16 UTC] PHP Fatal error:  Uncaught Exception: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'коньки%' AND p.price LIKE '%'' at line 1<br />Error No: 1064<br />SELECT COUNT(DISTINCT p.product_id) AS total FROM oc_product p LEFT JOIN oc_product_description pd ON (p.product_id = pd.product_id) WHERE pd.language_id = '2' AND pd.name LIKE %'коньки%' AND p.price LIKE '%' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('SELECT COUNT(DI...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(758): DB->query('SELECT COUNT(DI...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->getTotalProducts(Array)
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys. in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[16-Aug-2018 11:41:01 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '14608-143' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '14608', category_id = '143' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/product.php(154): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->addProductCategory(Array, '143')
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/product.php(1403): Proxy->__call('addProductCateg...', Array)
+#5 /home/chugu181/storage/modification/system/engine/action.php(79): ControllerCatalogProduct->addProductCategory()
+#6 /home/chugu181/dtoys.opencart-sol in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[21-Aug-2018 08:36:18 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '216-2' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_category_description SET category_id = '216', language_id = '2', name = 'Раскраски', description = '', meta_title = 'Раскраски', meta_description = '', meta_keyword = '' in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php:41
+Stack trace:
+#0 /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/chugu181/dtoys.opencart-solution.co.ua/admin/model/catalog/category.php(73): DB->query('INSERT INTO oc_...')
+#2 /home/chugu181/storage/modification/system/engine/loader.php(248): ModelCatalogCategory->editCategory('216', Array)
+#3 /home/chugu181/dtoys.opencart-solution.co.ua/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/chugu181/dtoys.opencart-solution.co.ua/admin/controller/catalog/category.php(55): Proxy->__call('editCategory', Array)
+#5 /home/chugu181/storage/modification/system/ in /home/chugu181/dtoys.opencart-solution.co.ua/system/library/db/mysqli.php on line 41
+[09-Sep-2018 08:21:30 UTC] PHP Fatal error:  Uncaught Exception: Error: <br />Error  No:  in /home/dneprtoyscom/public_html/system/library/db/mysqli.php:11
+Stack trace:
+#0 /home/dneprtoyscom/public_html/system/library/db.php(31): DB\MySQLi->__construct('localhost', 'chugu181_dtoys', '07+9sp0Jc)mb', 'chugu181_dtoys_...', '3306')
+#1 /home/dneprtoyscom/public_html/system/framework.php(80): DB->__construct('mysqli', 'localhost', 'chugu181_dtoys', '07+9sp0Jc)mb', 'chugu181_dtoys_...', '3306')
+#2 /home/dneprtoyscom/public_html/system/startup.php(104): require_once('/home/dneprtoys...')
+#3 /home/dneprtoyscom/public_html/admin/index.php(19): start('admin')
+#4 {main}
+  thrown in /home/dneprtoyscom/public_html/system/library/db/mysqli.php on line 11
+[09-Sep-2018 14:51:16 UTC] PHP Fatal error:  Uncaught Exception: Error: Table 'dneprtoyscom_new.oc_product' doesn't exist<br />Error No: 1146<br />UPDATE oc_product SET price = '99', status = '1', date_modified = NOW() WHERE vendor_id = '43356' AND vendor='1'  in /home/dneprtoyscom/public_html/system/library/db/mysqli.php:50
+Stack trace:
+#0 /home/dneprtoyscom/public_html/system/library/db.php(45): DB\MySQLi->query('UPDATE oc_produ...')
+#1 /home/dneprtoyscom/public_html/admin/model/catalog/product.php(859): DB->query('UPDATE oc_produ...')
+#2 /home/dneprtoyscom/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->updateProductPrice(Object(SimpleXMLElement), 1, 99)
+#3 /home/dneprtoyscom/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/dneprtoyscom/public_html/admin/controller/catalog/import.php(169): Proxy->__call('updateProductPr...', Array)
+#5 /home/dneprtoyscom/public_html/admin/controller/catalog/import.php(13): ControllerCatalogImport->uploadDreamToys()
+#6 /home/dneprtoyscom/storage/modification/sys in /home/dneprtoyscom/public_html/system/library/db/mysqli.php on line 50
+[09-Sep-2018 15:27:52 UTC] PHP Parse error:  syntax error, unexpected '56e3' (T_DNUMBER) in /home/dneprtoyscom/public_html/admin/controller/catalog/import.php on line 312
+[09-Sep-2018 15:33:00 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/dneprtoyscom/public_html/admin/controller/catalog/import.php on line 11

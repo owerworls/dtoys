@@ -1,0 +1,12 @@
+<p>Оставьте свой номер и мы быстро подтвердим ваш заказ по телефону</p>
+<form action="" id="catapulta">
+    <input type="tel" name="contact" class="form-control" placeholder="+375 (xx) xxx xx xx">
+    <input type="hidden" name="product_id" value="{{ product_id }}">
+    <button class="btn btn-primary catapulta-send" data-wait="Секундочку...">Подтвердить заказ</button>
+
+</form>
+<script>
+    $(document).ready(function () {
+        $('[type=tel]').mask('+375 (99) 999 99 99');
+    });
+</script>

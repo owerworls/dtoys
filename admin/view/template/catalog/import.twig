@@ -1,0 +1,53 @@
+{{ header }}{{ column_left }}
+<div id="content">
+    <div class="page-header">
+        <div class="container-fluid">
+            <div class="pull-right">
+
+            </div>
+            <h1>{{ heading_title }}</h1>
+            <ul class="breadcrumb">
+                {% for breadcrumb in breadcrumbs %}
+                    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="container-fluid">
+        {% if error_warning %}
+            <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        {% endif %}
+        {% if success %}
+            <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        {% endif %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-list"></i> Загрузка Dream-Toys</h3>
+            </div>
+            <div class="panel-body">
+                <form enctype="multipart/form-data" method="post" action="{{ form_url }}">
+                    <input type="file" name="file" required accept="application/xml">
+                    <input type="hidden" name="suppliers" value="1">
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-list"></i> Загрузка Beles</h3>
+            </div>
+            <div class="panel-body">
+                <form enctype="multipart/form-data" method="post" action="{{ form_url }}">
+                    <input type="file" name="file" required accept="application/xml">
+                    <input type="hidden" name="suppliers" value="2">
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{ footer }}
