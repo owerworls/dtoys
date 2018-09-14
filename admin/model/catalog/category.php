@@ -162,6 +162,7 @@ class ModelCatalogCategory extends Model {
 			}
 		}
 
+		
 		$this->cache->delete('category');
 	}
 
