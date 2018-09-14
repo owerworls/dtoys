@@ -58,7 +58,7 @@
                         </div>
                     {% endif %}
                 </div>
-                <script type="text/javascript">
+                <script>
                     $(".additional-images").owlCarousel({
                         items: 4,
                         itemsDesktop: [1199, 3],
@@ -490,7 +490,7 @@
             </div>
         {% endif %}
         <!-- Related products END -->
-        <script type="text/javascript">
+        <script>
             // Carousel Counter
             colsCarousel = $('#column-right, #column-left').length;
             if (colsCarousel == 2) {
@@ -524,7 +524,7 @@
         {{ content_bottom }}</div>
     {{ column_right }}</div>
 </div>
-<script type="text/javascript"><!--
+<script><!--
     $('select[name=\'recurring_id\'], input[name="quantity"]').change(function () {
         $.ajax({
             url: 'index.php?route=product/product/getRecurringDescription',
@@ -544,7 +544,7 @@
         });
     });
     //--></script>
-<script type="text/javascript"><!--
+<script><!--
     $('#button-cart').on('click', function () {
         $.ajax({
             url: 'index.php?route=checkout/cart/add',
@@ -600,7 +600,7 @@
     //--></script>
 
 
-<script type="text/javascript"><!--
+<script><!--
     $('#button-quick').on('click', function () {
         $.ajax({
             url: '/index.php?route=extension/module/catapulta/form',
@@ -667,7 +667,7 @@
 
     });
     //--></script>
-<script type="text/javascript"><!--
+<script><!--
     $('.date').datetimepicker({
         language: '{{ datepicker }}',
         pickTime: false
@@ -736,7 +736,7 @@
         }, 500);
     });
     //--></script>
-<script type="text/javascript"><!--
+<script><!--
 
     $('#review').delegate('.pagination a', 'click', function (e) {
         e.preventDefault();

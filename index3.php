@@ -1,5 +1,5 @@
 <?php
-
+//test
 $images = glob('*.jpeg');
 
 var_dump(extension_loaded ('imagick'));
