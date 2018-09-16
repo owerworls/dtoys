@@ -4,11 +4,10 @@ final class MySQLi {
 	private $connection;
 
 	public function __construct($hostname, $username, $password, $database, $port = '3306') {
-
-	    $this->connection = new \mysqli($hostname, $username, $password, $database, $port);
+		$this->connection = new \mysqli($hostname, $username, $password, $database, $port);
 
 		if ($this->connection->connect_error) {
-			throw new \Exception('Error: ' . $this->connection->error . '<br />Error  No: ' . $this->connection->errno);
+			throw new \Exception('Error: ' . $this->connection->error . '<br />Error No: ' . $this->connection->errno);
 		}
 
 		$this->connection->set_charset("utf8");
@@ -16,16 +15,7 @@ final class MySQLi {
 	}
 
 	public function query($sql) {
-
-        $start=microtime(true);
 		$query = $this->connection->query($sql);
-		$finish=microtime(true);
-        $duration=$finish-$start;
-
-        if($duration>1){
-            var_dump($duration);
-            var_dump($sql);
-        }
 
 		if (!$this->connection->errno) {
 			if ($query instanceof \mysqli_result) {

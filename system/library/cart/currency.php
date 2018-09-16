@@ -32,10 +32,9 @@ class Currency {
 
 		$amount = $value ? (float)$number * $value : (float)$number;
 		
-//		$amount = round($amount, (int)$decimal_place);
-        $amount = ceil($amount);
-
-        if (!$format) {
+		$amount = round($amount, (int)$decimal_place);
+		
+		if (!$format) {
 			return $amount;
 		}
 

@@ -3,8 +3,8 @@ class ControllerStartupStartup extends Controller {
 	public function index() {
 		// Settings
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "setting WHERE store_id = '0'");
-		
-		foreach ($query->rows as $setting) {
+
+        foreach ($query->rows as $setting) {
 			if (!$setting['serialized']) {
 				$this->config->set($setting['key'], $setting['value']);
 			} else {

@@ -106,7 +106,6 @@ class Response {
 	 * 
  	*/
 	public function output() {
-        if (!defined('HTTP_CATALOG')) $this->output = str_replace('index.php?route=common/home', '', $this->output);
 		if ($this->output) {
 			$output = $this->level ? $this->compress($this->output, $this->level) : $this->output;
 			
@@ -115,31 +114,8 @@ class Response {
 					header($header, true);
 				}
 			}
-
-            echo $this->sanitize_output($output);
+			
+			echo $output;
 		}
 	}
-
-
-
-    private function sanitize_output($buffer)
-    {
-//        return $buffer;
-
-        $search = array(
-            '/>\s+/',     // strip whitespaces after tags, except space
-            '/\s+</',     // strip whitespaces before tags, except space
-//            '/<!--(.|\s)*?-->/' // Remove HTML comments
-        );
-
-        $replace = array(
-            '> ',
-            ' <',
-//            ''
-        );
-
-        $buffer = preg_replace($search, $replace, $buffer);
-
-        return $buffer;
-    }
 }

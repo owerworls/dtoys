@@ -7,12 +7,6 @@ if (version_compare(phpversion(), '5.4.0', '<') == true) {
 	exit('PHP5.4+ Required');
 }
 
-//redirect from www
-if(strpos($_SERVER['SCRIPT_URI'],'www.dnepr-toys.com.ua')){
-    header('location: '.str_replace('www.dnepr-toys.com.ua','dnepr-toys.com.ua',$_SERVER['SCRIPT_URI']),true,301);
-    exit('redirect from www');
-}
-
 if (!ini_get('date.timezone')) {
 	date_default_timezone_set('UTC');
 }

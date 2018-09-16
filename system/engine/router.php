@@ -38,7 +38,7 @@ final class Router {
 	 *
 	 * @param	object	$action
 	 * @param	object	$error
- 	*/
+ 	*/		
 	public function dispatch(Action $action, Action $error) {
 		$this->error = $error;
 
@@ -52,12 +52,10 @@ final class Router {
 			}
 		}
 
-
-        while ($action instanceof Action) {
-
-            $action = $this->execute($action);
+		while ($action instanceof Action) {
+			$action = $this->execute($action);
 		}
-    }
+	}
 	
 	/**
 	 * 
@@ -65,22 +63,19 @@ final class Router {
 	 * @param	object	$action
 	 * @return	object
  	*/
-
 	private function execute(Action $action) {
-        $result = $action->execute($this->registry);
+		$result = $action->execute($this->registry);
 
-        if ($result instanceof Action) {
+		if ($result instanceof Action) {
 			return $result;
-		}
-
+		} 
+		
 		if ($result instanceof Exception) {
-
 			$action = $this->error;
 			
 			$this->error = null;
-
-            return $action;
-        }
-
+			
+			return $action;
+		}
 	}
 }
