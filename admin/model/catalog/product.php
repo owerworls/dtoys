@@ -298,11 +298,12 @@ class ModelCatalogProduct extends Model
         // SEO URL
         $this->db->query("DELETE FROM " . DB_PREFIX . "seo_url WHERE query = 'product_id=" . (int)$product_id . "'");
 
+
         if (isset($data['product_seo_url'])) {
             foreach ($data['product_seo_url'] as $store_id => $language) {
                 foreach ($language as $language_id => $keyword) {
-                        $keyword = (int)$product_id . "-" . $this->ru2Lat(trim($data['product_description'][$language_id]['name']));
-                        $this->db->query("INSERT INTO " . DB_PREFIX . "seo_url SET store_id = '" . (int)$store_id . "', language_id = '" . (int)$language_id . "', query = 'product_id=" . (int)$product_id . "', keyword = '" . $this->db->escape($keyword) . "'");
+                    $keyword = $this->ru2Lat(trim($data['product_description'][$language_id]['name'])) . "-" . (int)$product_id;
+                    $this->db->query("INSERT INTO " . DB_PREFIX . "seo_url SET store_id = '" . (int)$store_id . "', language_id = '" . (int)$language_id . "', query = 'product_id=" . (int)$product_id . "', keyword = '" . $this->db->escape($keyword) . "'");
                 }
             }
         }
@@ -318,8 +319,25 @@ class ModelCatalogProduct extends Model
         $this->cache->delete('product');
     }
 
+
     public function ru2Lat($string)
     {
+
+        $string = preg_replace('/\(.*\)/', '', $string);
+
+        $rus = array(
+            '\'', '&quot;', '\\', '.', ',', '  '
+        );
+
+        $lat = array(
+            '', '', '', '', '', ' '
+        );
+
+        $string = str_replace($rus, $lat, $string);
+
+        $string = explode(' ', $string, 6);
+        array_pop($string);
+        $string = implode('-', $string);
 
         $rus = array(
             'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й',
@@ -329,7 +347,7 @@ class ModelCatalogProduct extends Model
             'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф',
             'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я',
             'І', 'і', 'Ї', 'ї', 'Є', 'є', ' ', ',', '"', '/', '#',
-            '\'', '&quot;', '\\', '.'
+            '\'', '&quot;', '\\', '.', ':'
         );
 
         $lat = array(
@@ -340,10 +358,10 @@ class ModelCatalogProduct extends Model
             'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'f',
             'h', 'c', 'ch', 'sh', 'sh', '', 'y', '', 'e', 'yu', 'ya',
             'I', 'i', 'I', 'i', 'E', 'e', '-', '', '', '-', '_',
-            '', '', '', ''
+            '', '', '', '', ''
         );
 
-        $string = str_replace($rus, $lat, $string);
+        $string = mb_strtolower(str_replace($rus, $lat, $string));
 
         return ($string);
     }
@@ -480,7 +498,6 @@ class ModelCatalogProduct extends Model
             $sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
         }
 
-//        var_dump($sql);
         $query = $this->db->query($sql);
 
 
@@ -682,6 +699,22 @@ class ModelCatalogProduct extends Model
         }
 
         return $product_seo_url_data;
+    }
+
+    public function setProductSeoUrl($product_id, $data)
+    {
+        $this->db->query("DELETE FROM " . DB_PREFIX . "seo_url WHERE query = 'product_id=" . (int)$product_id . "'");
+
+        foreach ($data['product_seo_url'] as $store_id => $language) {
+            foreach ($language as $language_id => $keyword) {
+                $keyword = $this->ru2Lat($keyword) . "-" . (int)$product_id;
+                $sql = "INSERT INTO " . DB_PREFIX . "seo_url SET store_id = '" . (int)$store_id . "', language_id = '" . (int)$language_id . "', query = 'product_id=" . (int)$product_id . "', keyword = '" . $this->db->escape($keyword) . "'";
+                $this->db->query($sql);
+                file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/setProductSeoUrl.txt', $sql . PHP_EOL, 8);
+            }
+        }
+
+        $this->cache->delete('product');
     }
 
     public function getProductLayouts($product_id)

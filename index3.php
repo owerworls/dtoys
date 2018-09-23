@@ -1,24 +1,28 @@
 <?php
-//test
-$images = glob('*.jpeg');
+// Массив, представляющий из себя набор записей полученных из базы данных
+$records = array(
+    array(
+        'id' => 2135,
+        'first_name' => 'John',
+        'last_name' => 'Doe',
+    ),
+    array(
+        'id' => 3245,
+        'first_name' => 'Sally',
+        'last_name' => 'Smith',
+    ),
+    array(
+        'id' => 5342,
+        'first_name' => 'Jane',
+        'last_name' => 'Jones',
+    ),
+    array(
+        'id' => 5623,
+        'first_name' => 'Peter',
+        'last_name' => 'Doe',
+    )
+);
 
-var_dump(extension_loaded ('imagick'));
-foreach($images as $image)
-{
-
-
-    try
-    {
-        $img = new Imagick($image);
-        $img->setImageCompressionQuality(50);
-        $img->stripImage();
-        $img->writeImage($image);
-        $img->clear();
-        $img->destroy();
-
-        echo "Removed EXIF data from $image. \n";
-
-    } catch(Exception $e) {
-        echo 'Exception caught: ',  $e->getMessage(), "\n";
-    }
-}
+$first_names = array_column($records, 'first_name');
+print_r($first_names);
+phpinfo();

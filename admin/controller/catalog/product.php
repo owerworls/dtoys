@@ -1398,9 +1398,39 @@ class ControllerCatalogProduct extends Controller
     {
 
         $this->load->model('catalog/product');
-        $category_id = $this->request->post['add_product_category']??NULL;
-        $product_ids = $this->request->post['selected']??NULL;
+        $category_id = $this->request->post['add_product_category'] ?? NULL;
+        $product_ids = $this->request->post['selected'] ?? NULL;
         $this->model_catalog_product->addProductCategory($product_ids, $category_id);
 
+    }
+
+    public function rewriteseourl()
+    {
+//        $this->model_catalog_product->editProduct($this->request->get['product_id'], $this->request->post);
+
+        $filter_data = array(
+            'filter_name' => '',
+            'filter_model' => '',
+            'filter_price' => '',
+            'filter_quantity' => '',
+            'filter_status' => '',
+            'filter_category' => '',
+            'sort' => '',
+            'order' => '',
+            'start' => 1,
+            'limit' => 50000
+        );
+
+        $this->load->model('catalog/product');
+        $results = $this->model_catalog_product->getProducts($filter_data);
+
+        foreach ($results as $result) {
+
+            $product_info = $this->model_catalog_product->getProductSeoUrls($result['product_id']);
+            $data['product_seo_url'][0]=[2=>$result['name']];
+
+            $this->model_catalog_product->setProductSeoUrl($result['product_id'], $data);
+
+        }
     }
 }

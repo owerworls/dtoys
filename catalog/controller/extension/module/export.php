@@ -4,7 +4,8 @@ class ControllerExtensionModuleExport extends Controller
 {
     public function index()
     {
-       $this->product();
+
+       $this->yml();
     }
 
     private $availableCategories = [70, 71];
@@ -12,28 +13,42 @@ class ControllerExtensionModuleExport extends Controller
     public function yml()
     {
         $date = date('Y-m-d H:i');
-        $xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-        <yml_catalog date=\"$date\">
-          <shop>
-            <name>Интернет магазин «Conte Frostini»</name>
-            <company>Интернет магазин «Conte Frostini»</company>
-            <url>https://frostini.com.ua/</url>
-            <currencies>
-              <currency id=\"USD\" rate=\"CB\"/>
-              <currency id=\"KZT\" rate=\"CB\"/>
-              <currency id=\"RUR\" rate=\"CB\"/>
-              <currency id=\"BYN\" rate=\"CB\"/>
-              <currency id=\"UAH\" rate=\"1\"/>
-              <currency id=\"EUR\" rate=\"CB\"/>
-            </currencies>
-            <categories>";
+        $xml = '<yml_catalog date="2010-04-01 17:00">
+                    <shop>
+                    <name>Magazin</name>
+                    <company>Magazin</company>
+                    <url>http://www.magazin.ru/</url>
+                    <currencies>
+                    <currency id="RUR" rate="1" plus="0"/>
+                    </currencies>
+                    <categories>
+                    <category id="1">Оргтехника</category>
+                    <category id="10" parentId="1">Принтеры</category>
+                    <category id="100" parentId="10">Струйные принтеры</category>
+                    <category id="101" parentId="10">Лазерные принтеры</category>
+                    <category id="2">Фототехника</category>
+                    <category id="11" parentId="2">Фотоаппараты</category>
+                    <category id="12" parentId="2">Объективы</category>
+                    <category id="3">Книги</category>
+                    <category id="13" parentId="3">Детективы</category>
+                    <category id="14" parentId="3">Художественная литература</category>
+                    <category id="15" parentId="3">Учебная литература</category>
+                    <category id="16" parentId="3">Детская литература</category>
+                    <category id="4">Музыка и видеофильмы</category>
+                    <category id="17" parentId="4">Музыка</category>
+                    <category id="18" parentId="4">Видеофильмы</category>
+                    <category id="5">Путешествия</category>
+                    <category id="19" parentId="5">Туры</category>
+                    <category id="20" parentId="5">Авиабилеты</category>
+                    <category id="6">Билеты на мероприятия</category>
+                    </categories>';
 
         $this->load->model('catalog/category');
         $this->load->model('catalog/product');
 
 
-        $results = $this->model_catalog_category->getCategories($this->availableCategories);
-
+        $results = $this->model_catalog_category->getCategories();
+var_dump($results); die;
         foreach ($results as $result) {
             $xml .= "<category id=\"{$result['category_id']}\">{$result['name']}</category>";
         };

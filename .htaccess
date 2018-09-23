@@ -34,6 +34,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|js|css)
 RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
 
+RewriteCond %{HTTP_HOST} ^www\.dnepr-toys\.com\.ua$ [NC]
+RewriteRule ^(.*)$ https://dnepr-toys.com.ua/$1 [R=301,L]
 
 ### Additional Settings that may need to be enabled for some servers
 ### Uncomment the commands by removing the # sign in front of it.

@@ -24,6 +24,11 @@ if (!isset($_SERVER['DOCUMENT_ROOT'])) {
 	}
 }
 
+if(strpos($_SERVER['REQUEST_URI'],'index.php?_route_=')!==false){
+    header('location: '.str_replace('index.php?_route_=','',$_SERVER['REQUEST_URI']));
+    exit;
+}
+
 if (!isset($_SERVER['REQUEST_URI'])) {
 	$_SERVER['REQUEST_URI'] = substr($_SERVER['PHP_SELF'], 1);
 
